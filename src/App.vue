@@ -10,10 +10,12 @@ export default {
 </script>
 
 <template>
-  <Header />
+  <div class="container">
+    <Header />
+  </div>
 </template>
 
 <style lang="scss">
-@use './styles/partials/_variables.scss' as *;
+@use './styles/partials/variables.scss' as *;
 @use './styles/general.scss' as *;
 </style>
