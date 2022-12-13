@@ -5,26 +5,30 @@ export default {
 </script>
 
 <template>
-    <main>
+    <section>
         <div class="container">
-            <h2> <span>--<font-awesome-icon icon="fa-solid fa-angle-right" /></span>
+            <h2> --<span><font-awesome-icon icon="fa-solid fa-angle-right" /></span>
                 Content Goes here
-                <span><font-awesome-icon icon="fa-solid fa-angle-left" />--</span>
+                <span><font-awesome-icon icon="fa-solid fa-angle-left" /></span>--
             </h2>
         </div>
-    </main>
+    </section>
 </template>
 
 <style lang="scss" scoped>
 @use '../styles/partials/variables.scss' as *;
 @use '../styles/general.scss' as *;
 
-main {
+section {
     background-color: $secondary;
-    padding: 50px 0;
+    padding: 30px 0;
 
     h2 {
         color: white;
+    }
+
+    span {
+        font-size: 20px;
     }
 }
 </style>
