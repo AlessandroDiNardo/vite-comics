@@ -1,6 +1,7 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
+import AppContentsCard from './components/AppContentsCard.vue';
 import AppFooterSections from './components/AppFooterSections.vue';
 import AppFooterInfo from './components/AppFooterInfo.vue';
 import AppFooterContacts from './components/AppFooterContacts.vue';
@@ -10,6 +11,7 @@ export default {
   components: {
     AppHeader,
     AppMain,
+    AppContentsCard,
     AppFooterSections,
     AppFooterInfo,
     AppFooterContacts
@@ -23,6 +25,7 @@ export default {
   </header>
   <main>
     <AppMain />
+    <AppContentsCard />
   </main>
   <footer>
     <AppFooterSections />
