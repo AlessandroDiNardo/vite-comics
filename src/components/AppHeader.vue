@@ -92,7 +92,6 @@ section {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding-top: 20px;
 
         .logo-side {
             height: 100%;
