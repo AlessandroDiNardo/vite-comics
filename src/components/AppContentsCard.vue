@@ -14,6 +14,7 @@ export default {
 <template>
     <section>
         <div class="container">
+            <h2 id="current">CURRENT SERIES</h2>
             <div class="cards-container">
                 <div class="cards" v-for="(comic, index) in card" :key="index">
                     <div class="cards-img">
@@ -32,6 +33,9 @@ export default {
                     </div>
                 </div>
             </div>
+            <button id="load">
+                <h2>LOAD MORE</h2>
+            </button>
         </div>
     </section>
 </template>
@@ -44,34 +48,66 @@ section {
     background-color: $secondary;
     padding: 50px 0;
 
-    .cards-container {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+    .container {
+        padding: 50px 0;
 
-        .cards {
-            width: calc(100% / 6);
-            margin-bottom: 30px;
+        .cards-container {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
 
-            .cards-img {
-                width: 100%;
+            .cards {
+                width: calc(100% / 6);
+                margin-bottom: 30px;
 
-                img {
-                    width: 75%;
+                .cards-img {
+                    width: 100%;
+
+                    img {
+                        width: 75%;
+                    }
                 }
-            }
 
-            .cards-text {
-                color: white;
-                line-height: 30px;
+                .cards-text {
+                    color: white;
+                    line-height: 30px;
 
-                .price {
-                    color: red;
+                    .price {
+                        color: red;
+                    }
                 }
             }
         }
-    }
 
+        #current {
+            background-color: $primary;
+            width: 300px;
+            font-size: 27px;
+            text-align: center;
+            padding: 10px 15px;
+            position: absolute;
+            bottom: 323px;
+            left: 200px;
+
+            &:hover {
+                cursor: pointer;
+                background-color: white;
+                color: $primary;
+                transition: 1s;
+            }
+        }
+
+        #load {
+            background-color: $primary;
+            font-size: 10px;
+            text-align: center;
+            padding: 10px 15px;
+            position: absolute;
+            right: 50%;
+            border: none;
+            cursor: pointer;
+        }
+    }
 }
 </style>
