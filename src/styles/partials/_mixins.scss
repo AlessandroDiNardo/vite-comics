@@ -5,7 +5,7 @@
         justify-content: center;
     }
 
-    @else is $type =='horizontal' {
+    @else if $type =='horizontal' {
         align-items: center;
     }
 
