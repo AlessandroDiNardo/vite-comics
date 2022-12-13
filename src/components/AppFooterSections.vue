@@ -36,7 +36,7 @@ export default {
             <ul>
                 <li v-for="(section, index) in sections" :key="index">
                     <a href="#">
-                        <img :src="image" alt="">
+                        <img :src="section.image" alt="">
                         {{ section.text }}
                     </a>
                 </li>
@@ -58,14 +58,33 @@ section {
         list-style: none;
         display: flex;
         justify-content: space-around;
+        align-items: center;
         gap: 2em;
         font-size: 13px;
 
-        li a {
-            color: rgb(255, 255, 255);
-            text-decoration: none;
-            font-weight: 700;
+        li {
+            img {
+                width: 20%;
+            }
+
+            &:nth-child(n+5) {
+                width: 20%;
+            }
+
+            a {
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+                font-weight: 700;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                &:hover {
+                    text-decoration: 2px underline;
+                }
+            }
         }
+
     }
 }
 </style>
