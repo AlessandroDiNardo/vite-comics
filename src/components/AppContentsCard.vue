@@ -33,9 +33,7 @@ export default {
                     </div>
                 </div>
             </div>
-            <button id="load">
-                <h2>LOAD MORE</h2>
-            </button>
+            <h2 id="load">LOAD MORE</h2>
         </div>
     </section>
 </template>
@@ -87,8 +85,8 @@ section {
             text-align: center;
             padding: 10px 15px;
             position: absolute;
-            bottom: 323px;
-            left: 200px;
+            top: 58%;
+            left: 10%;
 
             &:hover {
                 cursor: pointer;
@@ -100,13 +98,19 @@ section {
 
         #load {
             background-color: $primary;
-            font-size: 10px;
+            font-size: 15px;
             text-align: center;
             padding: 10px 15px;
             position: absolute;
             right: 50%;
             border: none;
-            cursor: pointer;
+
+            &:hover {
+                cursor: pointer;
+                background-color: rgb(255, 255, 255);
+                transition: 1s;
+                color: $primary;
+            }
         }
     }
 }
